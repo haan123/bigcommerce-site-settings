@@ -1,0 +1,15 @@
+.c-btn-icon {
+  @apply h-12 w-12 rounded-full transition-colors duration-200;
+}
+
+.c-btn-icon--blue {
+  @apply text-blue-500;
+
+  &:hover {
+    background-color: rgba($global-blue-500, .1);
+  }
+
+  &:active {
+    background-color: rgba($global-blue-500, .2);
+  }
+}

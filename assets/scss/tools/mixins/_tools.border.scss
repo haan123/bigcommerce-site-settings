@@ -1,0 +1,41 @@
+// Single side border-radius
+
+@mixin eoi-border-radius($radius: $global-radius) {
+  border-radius: $radius;
+}
+
+@mixin eoi-border-top-radius($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin eoi-border-right-radius($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin eoi-border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin eoi-border-left-radius($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin eoi-border-box($border-color: $global-gray-lighter $global-gray-lighter $global-gray-light) {
+  &::before {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    pointer-events: none;
+    content: "";
+    border: 1px solid;
+    border-color: $border-color;
+
+    @content;
+  }
+}

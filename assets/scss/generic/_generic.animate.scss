@@ -1,0 +1,183 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse2x {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(2.25, 2.25, 2.25);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pin2 {
+  from {
+    transform: scale(0, 0);
+  }
+  32.9% {
+    transform: scale(0, 0);
+    animation-timing-function: linear;
+  }
+  47.1% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  58.8% {
+    transform: translate(0, -10px) scale(1);
+    animation-timing-function: ease-in;
+  }
+  7.6% {
+    transform: translate(0, 0) scale(1);
+    animation-timing-function: ease-out;
+  }
+  82.4% {
+    transform: translate(0, 0) scale(1.125, .875);
+    animation-timing-function: linear;
+  }
+  to {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes pin2 {
+  from {
+    transform: scale(0, 0);
+  }
+  32.9% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes pin {
+  from {
+    transform: scale(0, 0);
+  }
+  32.9% {
+    transform: scale(0, 0);
+    animation-timing-function: linear;
+  }
+  47.1% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  58.8% {
+    transform: translate(0, -10px) scale(1);
+    animation-timing-function: ease-in;
+  }
+  70.6% {
+    transform: translate(0, 0) scale(1);
+    animation-timing-function: ease-out;
+  }
+  82.4% {
+    transform: translate(0, 0) scale(1.125, .875);
+    animation-timing-function: linear;
+  }
+  to {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes point {
+  from {
+    transform: scale(0);
+  }
+  41.667% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(.188);
+  }
+  58.333% {
+    transform: scale(.7);
+  }
+  66.667% {
+    transform: scale(1.212);
+  }
+  75% {
+    transform: scale(1.4);
+  }
+  83.333% {
+    transform: scale(1.304);
+  }
+  91.667% {
+    transform: scale(1.096);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes bounce {
+  to {
+    opacity: .3;
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes box {
+  50% {
+    border-radius: 50%;
+    transform: scale(.5) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(720deg);
+  }
+}
+
+@keyframes shadow {
+  50% {
+    background-color: rgba(#000, .1);
+    transform: scale(.5);
+  }
+}
+
+@keyframes signal {
+  0% { opacity: 0; }
+  20%, 100% { opacity: 1; }
+}

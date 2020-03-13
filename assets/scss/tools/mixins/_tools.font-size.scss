@@ -1,0 +1,43 @@
+///* ========================================================================
+//   #FONT-SIZE
+//   ======================================================================== */
+
+// Generate a font-size and baseline-compatible line-height.
+@mixin eoi-font-size($font-size: $global-font-size, $line-height: auto, $important: false, $relative: false) {
+
+  @if ($important == true) {
+    $important: !important;
+  } @elseif ($important == false) {
+    $important: null;
+  } @else {
+    @error "`#{$important}` needs to be `true` or `false`."
+  }
+
+  @if ($relative == true) {
+    font-size: eoi-em-calc($font-size) $important;
+  } @else {
+    font-size: eoi-rem-calc($font-size) $important;
+  }
+
+  @if ($line-height == "auto") {
+    // Convert to px if font size value is `rem`
+    @if unit($font-size) == "rem" {
+      $font-size: eoi-strip-unit($font-size) * 16px;
+    }
+
+    line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size) $important;
+  }
+
+  @else {
+
+    @if (type-of($line-height) == number or $line-height == "inherit" or $line-height == "normal") {
+      line-height: $line-height $important;
+    }
+
+    @elseif ($line-height != "none" and $line-height != false) {
+      @error "D’oh! `#{$line-height}` is not a valid value for `$line-height`."
+    }
+
+  }
+
+}

@@ -1,0 +1,28 @@
+// MIXINS
+
+// Unit.................Functions that convert px, em, % to rem and vise versa.
+// Font-size............A mixin which guarantees baseline-friendly line-heights.
+// Clearfix.............Micro clearfix mixin.
+// Hidden...............Mixin for hiding elements.
+// Sass MQ..............inuitcss’ default media query manager.
+// Border Radius........Mixin for border radius
+// Hover................Mixins hover, focus, active states
+
+
+@mixin eoi-box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+@mixin eoi-transition($transition...) {
+  transition: $transition;
+}
+
+
+@import "mixins/tools.unit";
+@import "mixins/tools.font-size";
+@import "mixins/tools.clearfix";
+@import "mixins/tools.hidden";
+@import "mixins/tools.mq";
+@import "mixins/tools.border";
+@import "mixins/tools.hover";
+@import "mixins/tools.text-truncate";
