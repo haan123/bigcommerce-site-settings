@@ -1,0 +1,101 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+// Start with assigning color names to specific hex values.
+$global-white:  #fff !default;
+$global-black:  #000 !default;
+$global-blue-500:  #1da1f2 !default;
+$global-blue-600:  #1781c2 !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$global-body-bg:       $global-white !default;
+$global-body-color:    $global-black !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+//
+// [1]: Small devices (landscape phones, 576px and up)
+// [2]: Medium devices (tablets, 768px and up)
+// [3]: Large devices (desktops, 992px and up)
+// [4]: Extra large devices (large desktops, 1200px and up)
+
+$global-grid-breakpoints: (
+  xs: 0,
+  sm: 576px, // [1]
+  md: 768px, // [2]
+  lg: 992px, // [3]
+  xl: 1260px // [4]
+) !default;
+
+// When using Sass-MQ, this defines the separator for the breakpoints suffix
+// in the class name. By default, we are generating the responsive suffixes
+// for the classes with a `@` symbol so you get classes like:
+// <div class="u-3/12@mobile">
+$global-breakpoint-separator: \@ !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$global-grid-gutter-width-base:     30px !default;
+$global-grid-gutter-widths: (
+  sm: $global-grid-gutter-width-base,
+) !default;
+$global-border-width: 1px !default;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$global-font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif !default;
+$global-font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$global-font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$global-font-family-base:       $global-font-family-sans-serif !default;
+
+
+$global-font-size-base: (15px / $global-font-size) * 1rem !default;
+$global-font-size-base-mobile: (14px / $global-font-size) * 1rem !default;
+$global-font-size-xlg:   1.5rem !default; // 24px
+$global-font-size-28:   1.75rem !default; // 28px
+$global-font-size-22:   1.375rem !default; // 22px
+$global-font-size-lg:   1.25rem !default; // 20px
+$global-font-size-18:   1.125rem !default; // 18px
+$global-font-size-15:   .9375rem !default;
+$global-font-size-md:   .875rem !default;
+$global-font-size-sm:   .8125rem !default;
+$global-font-size-xs:   .75rem !default;
+
+$global-font-size-h1:  36px !default;
+$global-font-size-h2:  28px !default;
+$global-font-size-h3:  24px !default;
+$global-font-size-h4:  20px !default;
+$global-font-size-h5:  18px !default;
+$global-font-size-h6:  16px !default;
+
+
+$global-font-weight-bold: 600 !default;
+
+
+$global-cursor-disabled:  default !default;
+
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$global-zindex-dropdown:          1000 !default;

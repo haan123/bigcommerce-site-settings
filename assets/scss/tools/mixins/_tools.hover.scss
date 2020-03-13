@@ -1,0 +1,22 @@
+@mixin eoi-hover-focus {
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin eoi-plain-hover-focus {
+  &,
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin eoi-hover-focus-active {
+  &:focus,
+  &:active,
+  &:hover {
+    @content
+  }
+}
