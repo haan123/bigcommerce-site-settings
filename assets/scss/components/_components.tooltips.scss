@@ -1,3 +1,12 @@
 .c-tooltip {
-  display: none;
+  bottom: 100%;
+  min-width: 200px;
+}
+
+.has-tooltip {
+  &:hover {
+    .c-tooltip {
+      @apply translate-y-0 opacity-100;
+    }
+  }
 }

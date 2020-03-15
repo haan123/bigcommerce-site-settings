@@ -21,17 +21,19 @@
     }
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
     "cross-env": "^5.2.0",
     "koa": "^2.6.2",
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0",
-    "@nuxtjs/dotenv": "^1.4.0"
+    "nuxt": "^2.0.0",
+    "prismjs": "^1.19.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
+    "@nuxtjs/svg-sprite": "^0.4.10",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -43,7 +45,6 @@
     "node-sass": "^4.13.1",
     "nodemon": "^1.18.9",
     "nuxt-purgecss": "^0.2.1",
-    "nuxt-svgicon": "^1.2.7",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
     "stylelint": "^10.1.0",

@@ -1,0 +1,75 @@
+.cm-s-default {
+
+  &.CodeMirror {
+    @apply bg-gray-100 font-mono;
+  }
+
+  .CodeMirror-selected {
+    background: #424242;
+  }
+  .CodeMirror-gutters {
+    @apply bg-gray-200;
+    border-right: 0;
+  }
+  .CodeMirror-guttermarker {
+    color: #e78c45;
+  }
+  .CodeMirror-guttermarker-subtle {
+    color: #777;
+  }
+  .CodeMirror-linenumber {
+    @apply text-gray-600;
+  }
+  .CodeMirror-cursor {
+    border-left: 1px solid #6a6a6a;
+  }
+  .cm-comment {
+    color: #d27b53;
+  }
+  .cm-atom {
+    color: #a16a94;
+  }
+  .cm-number {
+    color: #a16a94;
+  }
+  .cm-attribute,
+  .cm-property {
+    color: #4caf50;
+  }
+  .cm-keyword {
+    @apply text-red-400;
+  }
+  .cm-string {
+    color: #3f51b5;
+  }
+  .cm-variable {
+    color: #b9ca4a;
+  }
+  .cm-variable-2 {
+    color: #7aa6da;
+  }
+  .cm-def {
+    color: #e78c45;
+  }
+  .cm-bracket {
+    color: #9e9e9e !important;
+  }
+  .cm-tag {
+    color: #e91e63;
+  }
+  .cm-link {
+    color: #a16a94;
+  }
+  .cm-error {
+    @apply bg-red-400;
+    color: #6a6a6a;
+  }
+  .CodeMirror-activeline-background {
+    background: #2a2a2a;
+  }
+  .CodeMirror-matchingbracket {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+}
+

@@ -13,7 +13,12 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:'stylesheet', type: 'text/css', href:'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.0/codemirror.min.css' },
+    ],
+    script: [
+      { defer: true, src: 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.0/codemirror.min.js' },
+      { defer: true, src: 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.0/mode/xml/xml.min.js' }
     ]
   },
   /*
@@ -31,6 +36,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/prism'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -45,7 +51,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-svgicon',
+    '@nuxtjs/svg-sprite',
     'nuxt-purgecss',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
@@ -53,7 +59,13 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
-  purgeCSS: {},
+  svgSprite: {
+    elementClass: 'o-icon',
+    input: '~/assets/svg/'
+  },
+  purgeCSS: {
+    whitelistPatternsChildren: [/token$/]
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

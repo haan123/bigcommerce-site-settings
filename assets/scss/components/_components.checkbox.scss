@@ -1,0 +1,19 @@
+.c-checkbox {
+  &:hover {
+    @apply bg-gray-200;
+
+    &.is-checked {
+      @apply bg-blue-100;
+    }
+  }
+
+  &.is-checked {
+    .c-checkbox__inner {
+      @apply bg-blue-500 border-blue-500;
+    }
+
+    .o-icon {
+      display: block;
+    }
+  }
+}
